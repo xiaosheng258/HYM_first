@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华讯科技 - 管理平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+    <!-- 顶部导航栏 -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-text">华讯科技</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active" data-target="home"><a href="#">主页</a></li>
+                    <li class="nav-item" data-target="user"><a href="#">用户</a></li>
+                    <li class="nav-item" data-target="harmony">
+                        <a href="#">鸿蒙生态</a>
+                    </li>
+                    <li class="nav-item" data-target="ict"><a href="#">ICT学院</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <span class="welcome-text">欢迎您，管理员</span>
+                <button id="logout-btn" class="logout-button">退出登录</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="dashboard-content">
+        <!-- 主页卡片 -->
+        <section class="card active" id="home">
+            <div class="card-header">
+                <h2>华讯科技管理平台</h2>
+                <p>企业数字化转型解决方案</p>
+            </div>
+            <div class="card-body">
+                <div class="hero-section">
+                    <div class="hero-image">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xMDAgMzAwTDMwMCA1MDBNOTAwIDMwMEw3MDAgNTAwIiBzdHJva2U9IiMxYTU2ZGIiIHN0cm9rZS13aWR0aD0iNCIvPgogICAgPHBhdGggZD0iTTUwMCAyMDBDMjAwIDIwMCAxMDAgMjUwIDEwMCA0MDAgTDMwMCA0NDBMNTUwIDMwMEw4MDAgNDQwTDEwMDAgNDAwQzkwMCAyNTAgODAwIDIwMCA1MDAgMjAwWiIgZmlsbD0iIzFhNTZkYiIgb3BhY2l0eT0iMC44Ii8+CiAgICA8Y2lyY2xlIGN4PSI1MDAiIGN5PSIzMDAiIHI9IjEwMCIgc3Ryb2tlPSIjMWE1NmRiIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8L2c+Cjwvc3ZnPg==" alt="华讯科技主图" class="responsive-image">
+                    </div>
+                    <div class="hero-content">
+                        <h3>数字化转型解决方案</h3>
+                        <p>华讯科技致力于为企业提供全方位的数字化转型服务，包括云服务、人工智能、大数据分析等前沿技术应用。</p>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">企业客户</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">客户满意度</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10年+</div>
+                                <div class="stat-label">行业经验</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-section">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h4>企业云服务</h4>
+                        <p>安全可靠的云基础设施，助力企业降本增效</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h4>人工智能平台</h4>
+                        <p>先进的AI算法，赋能企业智能化升级</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h4>大数据分析</h4>
+                        <p>深度挖掘数据价值，驱动业务决策</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h4>网络安全方案</h4>
+                        <p>全方位保障企业数据和系统安全</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户卡片 -->
+        <section class="card" id="user">
+            <div class="card-header">
+                <h2>用户管理</h2>
+                <p>用户信息与权限管理</p>
+            </div>
+            <div class="card-body">
+                <div class="user-profile-section">
+                    <div class="profile-image">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8Y2lyY2xlIGN4PSI3MCIgY3k9IjQwIiByPSIzMCIgc3Ryb2tlPSIjMWE1NmRiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI3MCIgY3k9IjEwMCIgcj0iNDUiIHN0cm9rZT0iIzFhNTZkYiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTUwIDEyMEw1MCAxMzAgOTAgMTMwIDkwIDEyMCIgc3Ryb2tlPSIjMWE1NmRiIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KPC9zdmc+" alt="用户头像" class="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h3>管理员账户</h3>
+                        <div class="info-row">
+                            <span class="info-label">用户名：</span>
+                            <span class="info-value">admin</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">邮箱：</span>
+                            <span class="info-value">admin@huaxuntech.com</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">角色：</span>
+                            <span class="info-value">系统管理员</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">加入时间：</span>
+                            <span class="info-value">2023-01-01</span>
+                        </div>
+                        <button class="edit-profile-btn">编辑资料</button>
+                    </div>
+                </div>
+                <div class="user-management-section">
+                    <h3>用户列表</h3>
+                    <div class="table-responsive">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>用户名</th>
+                                    <th>邮箱</th>
+                                    <th>角色</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>admin</td>
+                                    <td>admin@huaxuntech.com</td>
+                                    <td>管理员</td>
+                                    <td><span class="status-active">活跃</span></td>
+                                    <td>
+                                        <button class="action-btn edit">编辑</button>
+                                        <button class="action-btn delete">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>user1</td>
+                                    <td>user1@example.com</td>
+                                    <td>普通用户</td>
+                                    <td><span class="status-active">活跃</span></td>
+                                    <td>
+                                        <button class="action-btn edit">编辑</button>
+                                        <button class="action-btn delete">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>user2</td>
+                                    <td>user2@example.com</td>
+                                    <td>普通用户</td>
+                                    <td><span class="status-inactive">未激活</span></td>
+                                    <td>
+                                        <button class="action-btn edit">编辑</button>
+                                        <button class="action-btn delete">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="add-user-btn">添加用户</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 鸿蒙生态卡片 -->
+        <section class="card" id="harmony">
+            <div class="card-header">
+                <h2>鸿蒙生态</h2>
+                <p>华为鸿蒙操作系统解决方案</p>
+            </div>
+            <div class="card-body">
+                <div class="harmony-hero">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xMDAgNTAwTDUwMCAyNTBMMTAwIDUwMCIgc3Ryb2tlPSIjYmQxYjkxIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KICAgIDxwYXRoIGQ9Ik01MDAgMjUwTDEwMDAgNTBMMTAwMCA1MDAiIHN0cm9rZT0iI2JkMWI5MSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2Utb3BhY2l0eT0iMC44Ii8+CiAgICA8cGF0aCBkPSJNMTAwIDUwMEw1MDAgMjUwTDkwMCA1MCIgc3Ryb2tlPSIjYmQxYjkxIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KICA8L2c+Cjwvc3ZnPg==" alt="鸿蒙生态系统" class="responsive-image harmony-image">
+                </div>
+                <div class="harmony-features">
+                    <h3>鸿蒙生态核心优势</h3>
+                    <div class="feature-grid">
+                        <div class="harmony-feature-card">
+                            <div class="feature-img">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHBhdGggZD0iTTYwIDM0aDR2NTJoLTRWMzR6bTAgNjZoNHYyaC00di0yek0yNiA2aDR2Nmg0di02SDI2ek0yNiA1NmM2LjYyNyAwIDEyLTUuMzczIDEyLTEycy01LjM3My0xMi0xMi0xMi0xMiA1LjM3My0xMiAxMiA1LjM3MyAxMiAxMiAxMnptMCAxOGMtNi42MjcgMC0xMi01LjM3My0xMi0xMnM1LjM3My0xMiAxMi0xMiAxMiA1LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMnoiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==" alt="分布式能力" class="feature-icon-image">
+                            </div>
+                            <h4>分布式能力</h4>
+                            <p>打破设备壁垒，实现资源共享和协同工作</p>
+                        </div>
+                        <div class="harmony-feature-card">
+                            <div class="feature-img">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHBhdGggZD0iTTI2IDU4VjQyaDEwVjIyaDE0djIwTDYwIDcyVjQyTDQ2IDU4aC0xMnptMCAzNmMwIDkuOTQtOC4wNiAxOC0xOCAxOHMtMTgtOC4wNi0xOC0xOCA4LjA2LTE4IDE4LTE4IDE4IDguMDYgMTggMTh6IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik0zNiA2MmgxMnYyMkgzNlY2MHoiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==" alt="多端适配" class="feature-icon-image">
+                            </div>
+                            <h4>多端适配</h4>
+                            <p>一次开发，多端部署，无缝体验</p>
+                        </div>
+                        <div class="harmony-feature-card">
+                            <div class="feature-img">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHBhdGggZD0iTTYwIDM0djE4aDR2MmgxMlY1MmgtMTJWNTJoLTJ2MTJjMCAxLjExLS44OSAyLTItMnYtMkg0MFY0MGMwLTEuMTEuODktMiAyLTJoMjBjMS4xMSAwIDItLjg5IDItMnptMCA3MGMwIDkuOTQtOC4wNiAxOC0xOCAxOHMtMTgtOC4wNi0xOC0xOCA4LjA2LTE4IDE4LTE4IDE4IDguMDYgMTggMTh6IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik03NCAzMmgxNlY0Mkg3NFYzMnptLTI4IDI0aDE2VjY2SDQ2VjU2em0yOCAxMmgxNlY4MEg3NFY3MHoiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPg==" alt="安全可信" class="feature-icon-image">
+                            </div>
+                            <h4>安全可信</h4>
+                            <p>基于微内核架构，提供端到端的安全保障</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="harmony-solutions">
+                    <h3>行业解决方案</h3>
+                    <div class="solution-card">
+                        <h4>智能办公解决方案</h4>
+                        <p>基于鸿蒙系统的智能办公套件，提升企业协作效率</p>
+                    </div>
+                    <div class="solution-card">
+                        <h4>智能家居生态</h4>
+                        <p>构建互联互通的智能家居生态系统，打造智慧生活</p>
+                    </div>
+                    <div class="solution-card">
+                        <h4>工业物联网平台</h4>
+                        <p>助力制造业数字化转型，实现设备智能管理</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ICT学院卡片 -->
+        <section class="card" id="ict">
+            <div class="card-header">
+                <h2>ICT学院</h2>
+                <p>信息通信技术培训与认证</p>
+            </div>
+            <div class="card-body">
+                <div class="ict-banner">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0wIDMwMEwxMDAgMTUwTDAgMCBNMTAwMCAwTDUwMCAxNTBMMTAwMCAzMDAiIHN0cm9rZT0iIzExNzk4MSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2Utb3BhY2l0eT0iMC45Ii8+CiAgICA8cGF0aCBkPSJNMCAxNTBMMTAwMCAwTDEwMDAgMTUwTDAgMzAwIiBzdHJva2U9IiMxMTc5ODEiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLW9wYWNpdHk9IjAuOSIvPgogIDwvZz4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPgo8L3N2Zz4=" alt="ICT学院" class="responsive-image ict-image">
+                </div>
+                <div class="courses-section">
+                    <h3>热门课程</h3>
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTFjNGRmIi8+CiAgPHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHRleHQgeD0iNTAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiI+6YCa6K6t57ucPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuS7peWFtuW1i5nSEVMTAwPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuiAueOAgg0KICAg5bm/5LqG77yM5pyJ6L+Q6LWE6K6pPC90ZXh0PgogIDxsaW5lIHgxPSIxMCIgeTE9IjE4MCIgeDI9IjI5MCIgeTI9IjE4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KPC9zdmc+" alt="云计算课程" class="course-thumbnail">
+                            </div>
+                            <div class="course-info">
+                                <h4>云计算基础与应用</h4>
+                                <p>掌握云计算核心概念、架构和主流云服务平台使用</p>
+                                <div class="course-meta">
+                                    <span class="course-duration">40课时</span>
+                                    <span class="course-level">初级到中级</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTFjNGRmIi8+CiAgPHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHRleHQgeD0iNTAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiI+5a2Y6YCa6K6tPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuS7peWFtuW1i5nSEVMjAwPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuiAueOAgg0KICAg5bm/5LqG77yM5pyJ6L+Q6LWE6K6pPC90ZXh0PgogIDxsaW5lIHgxPSIxMCIgeTE9IjE4MCIgeDI9IjI5MCIgeTI9IjE4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KPC9zdmc+" alt="人工智能课程" class="course-thumbnail">
+                            </div>
+                            <div class="course-info">
+                                <h4>人工智能基础与实践</h4>
+                                <p>学习机器学习、深度学习核心算法及实际应用案例</p>
+                                <div class="course-meta">
+                                    <span class="course-duration">60课时</span>
+                                    <span class="course-level">中级</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTFjNGRmIi8+CiAgPHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAlIiBmaWxsPSIjM2Q4MjZmIi8+CiAgPHRleHQgeD0iNTAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiI+56ul6K6t6L6LPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuS7peWFtuW1i5nSEVMzAwPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIxNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPuiAueOAgg0KICAg5bm/5LqG77yM5pyJ6L+Q6LWE6K6pPC90ZXh0PgogIDxsaW5lIHgxPSIxMCIgeTE9IjE4MCIgeDI9IjI5MCIgeTI9IjE4MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjgiLz4KPC9zdmc+" alt="网络安全课程" class="course-thumbnail">
+                            </div>
+                            <div class="course-info">
+                                <h4>网络安全与防护</h4>
+                                <p>深入学习网络安全威胁、防护技术和应急响应</p>
+                                <div class="course-meta">
+                                    <span class="course-duration">45课时</span>
+                                    <span class="course-level">中级到高级</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certifications-section">
+                    <h3>专业认证</h3>
+                    <p>华讯科技ICT学院提供多种行业认可的专业认证，帮助您提升职业竞争力。</p>
+                    <div class="certification-logos">
+                        <div class="cert-logo">HCIA</div>
+                        <div class="cert-logo">HCIP</div>
+                        <div class="cert-logo">HCIE</div>
+                    </div>
+                    <button class="view-all-courses-btn">查看全部课程</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>华讯科技</h3>
+                <p>企业数字化转型解决方案提供商</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">服务条款</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 华讯科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
