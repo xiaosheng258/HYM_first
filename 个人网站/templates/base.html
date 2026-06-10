@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>胡一鸣个人网站{% block title %}{% endblock %}</title>
+    <meta name="description" content="胡一鸣的个人作品网站，展示网络工程、Python Web、Linux 运维实践和 BiliDown 工具。">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="topbar">
+                <a class="brand" href="{% url 'home' %}" aria-label="胡一鸣个人网站首页">
+                    <span class="brand-mark">HY</span>
+                    <span class="brand-copy">
+                        <strong>胡一鸣</strong>
+                        <em>Network Engineering · Python Web</em>
+                    </span>
+                </a>
+                <div class="quick-contact hidden-xs">
+                    <a href="mailto:3346742145@qq.com">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        3346742145@qq.com
+                    </a>
+                    <a href="tel:19565638548">
+                        <span class="glyphicon glyphicon-phone"></span>
+                        19565638548
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default main-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="{% if active_menu == 'home' %}active{% endif %}">
+                            <a href="{% url 'home' %}">首页</a>
+                        </li>
+                        <li class="dropdown {% if active_menu == 'about' %}active{% endif %}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'aboutApp:survey' %}">基本信息</a></li>
+                                <li><a href="{% url 'aboutApp:honor' %}">荣誉经历</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown {% if active_menu == 'projects' %}active{% endif %}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目作品 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'productsApp:products' 'network' %}">网络工程实践</a></li>
+                                <li><a href="{% url 'productsApp:products' 'python' %}">Python Web 项目</a></li>
+                                <li><a href="{% url 'productsApp:products' 'tool' %}">实用工具作品</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown {% if active_menu == 'notes' %}active{% endif %}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">技术笔记 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'newsApp:news' 'network' %}">网络基础</a></li>
+                                <li><a href="{% url 'newsApp:news' 'linux' %}">Linux 运维</a></li>
+                                <li><a href="{% url 'newsApp:news' 'python' %}">Python 学习</a></li>
+                            </ul>
+                        </li>
+                        <li class="{% if active_menu == 'experience' %}active{% endif %}">
+                            <a href="{% url 'scienceApp:science' %}">实践经历</a>
+                        </li>
+                        <li class="{% if active_menu == 'tools' %}active{% endif %}">
+                            <a href="{% url 'toolsApp:bilidown' %}">BiliDown</a>
+                        </li>
+                        <li class="{% if active_menu == 'contact' %}active{% endif %}">
+                            <a href="{% url 'contactApp:contact' %}">联系我</a>
+                        </li>
+                    </ul>
+                    <a class="nav-resume hidden-sm hidden-xs" href="{% url 'contactApp:recruit' %}">
+                        <span class="glyphicon glyphicon-file"></span>
+                        简历
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="footer-brand" href="{% url 'home' %}">
+                        <span class="brand-mark">HY</span>
+                        <span>胡一鸣个人网站</span>
+                    </a>
+                    <p>网络工程本科在读，持续整理 Linux、Python、网络规划与云计算方向的学习和项目实践。</p>
+                </div>
+                <div>
+                    <h4>快速入口</h4>
+                    <a href="{% url 'aboutApp:survey' %}">关于我</a>
+                    <a href="{% url 'productsApp:products' 'python' %}">作品项目</a>
+                    <a href="{% url 'toolsApp:bilidown' %}">BiliDown 工具</a>
+                </div>
+                <div>
+                    <h4>联系方式</h4>
+                    <a href="mailto:3346742145@qq.com">3346742145@qq.com</a>
+                    <a href="tel:19565638548">19565638548</a>
+                    <span>河北省邢台市</span>
+                </div>
+            </div>
+            <div class="copyright">© 2026 Hu Yiming. Built with Django.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

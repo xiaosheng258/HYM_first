@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} - {{ product.title }}{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">{{ productName }}</span>
+        <h1>{{ product.title }}</h1>
+        <p>{{ product.summary }}</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container narrow">
+        <div class="content-panel">
+            <h2>项目说明</h2>
+            {% for paragraph in product.description %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+
+            <h2>相关技术</h2>
+            <div class="tag-row large">
+                {% for tech in product.tech %}
+                <span>{{ tech }}</span>
+                {% endfor %}
+            </div>
+
+            <div class="detail-actions">
+                <a class="btn btn-default" href="{% url 'productsApp:products' product.category %}">返回列表</a>
+                {% if product.id == 3 %}
+                <a class="btn btn-primary" href="{% url 'toolsApp:bilidown' %}">打开 BiliDown</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

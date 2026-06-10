@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} - {{ mynew.title }}{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">{{ newName }}</span>
+        <h1>{{ mynew.title }}</h1>
+        <p>{{ mynew.date }}</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container narrow">
+        <div class="content-panel">
+            {% for paragraph in mynew.content %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+            <div class="detail-actions">
+                <a class="btn btn-default" href="{% url 'newsApp:news' mynew.category %}">返回笔记列表</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

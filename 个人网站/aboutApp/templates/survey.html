@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - 关于我{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>关于我</h1>
+        <p>网络工程本科在读，正在把课程实践、竞赛训练和个人工具沉淀成可展示、可复用的项目。</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="side-profile">
+                    <img src="{% static 'img/profile.jpg' %}" alt="胡一鸣">
+                    <h2>胡一鸣</h2>
+                    <p>河北传媒学院 · 网络工程（本科）</p>
+                    <a class="btn btn-primary btn-block" href="{% url 'contactApp:contact' %}">联系我</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="content-panel">
+                    <h2>基本信息</h2>
+                    <div class="info-grid">
+                        <div><strong>学校</strong><span>河北传媒学院</span></div>
+                        <div><strong>专业</strong><span>网络工程（本科）</span></div>
+                        <div><strong>时间</strong><span>2023-09 至 2027-06</span></div>
+                        <div><strong>成绩</strong><span>GPA 3.55 / 4.0</span></div>
+                        <div><strong>籍贯</strong><span>河北省邢台市</span></div>
+                        <div><strong>邮箱</strong><span>3346742145@qq.com</span></div>
+                    </div>
+
+                    <h2>学习与项目状态</h2>
+                    <div class="info-grid">
+                        <div><strong>方向</strong><span>网络规划 / Linux 运维</span></div>
+                        <div><strong>项目</strong><span>Django 个人站 / BiliDown</span></div>
+                        <div><strong>认证</strong><span>HCIA 相关知识能力</span></div>
+                        <div><strong>竞赛</strong><span>华为 ICT 网络赛道省级三等奖</span></div>
+                    </div>
+
+                    <h2>能力概览</h2>
+                    <p>
+                        熟悉 Linux 系统、Python/C++ 编程、eNSP 网络仿真、TCP/IP 协议和网络设备部署；
+                        具备 HCIA 相关知识能力，能够完成基础网络规划、排障和服务器环境配置。
+                    </p>
+
+                    <h2>自我评价</h2>
+                    <p>
+                        我关注网络运维、云计算和 Python Web 方向，习惯用项目实践验证课程知识。
+                        在校级工程实践、华为 ICT 竞赛和社会实践中，我持续锻炼团队协作、沟通协调和问题解决能力。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

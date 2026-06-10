@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} - {{ productName }}{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">Portfolio</span>
+        <h1>{{ productName }}</h1>
+        <p>从课程实验、网站改造到工具封装，按方向整理当前可展示作品。</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container">
+        <div class="section-heading">
+            <span>Portfolio</span>
+            <h2>{{ productName }}</h2>
+            <p>每个作品都对应一个明确的实践场景，重点展示问题、技术栈和落地结果。</p>
+        </div>
+        <div class="filter-tabs">
+            {% for key, label in categories.items %}
+            <a class="{% if sub_menu == key %}active{% endif %}" href="{% url 'productsApp:products' key %}">{{ label }}</a>
+            {% endfor %}
+        </div>
+
+        <div class="row portfolio-grid">
+            {% for project in productList %}
+            <div class="col-md-4 col-sm-6">
+                <article class="portfolio-card">
+                    <span class="portfolio-number">0{{ project.id }}</span>
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.summary }}</p>
+                    <div class="tag-row">
+                        {% for tech in project.tech %}
+                        <span>{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    <a class="text-link" href="{% url 'productsApp:productDetail' project.id %}">查看详情</a>
+                </article>
+            </div>
+            {% empty %}
+            <div class="col-sm-12">
+                <div class="empty-state">该方向暂无作品。</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} - 简历{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">Resume</span>
+        <h1>个人简历</h1>
+        <p>教育背景、技能方向和实践经历摘要。</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container narrow">
+        <div class="content-panel">
+            <h2>教育背景</h2>
+            <p>2023-09 至 2027-06，{{ profile.school }}，{{ profile.major }}，GPA 3.55 / 4.0。</p>
+
+            <h2>亮点摘要</h2>
+            <div class="info-grid">
+                <div><strong>竞赛</strong><span>华为 ICT 网络赛道省级三等奖</span></div>
+                <div><strong>工程实践</strong><span>优秀个人作品三等奖</span></div>
+                <div><strong>网站项目</strong><span>Django 个人门户改造</span></div>
+                <div><strong>工具项目</strong><span>BiliDown 视频下载工具</span></div>
+            </div>
+
+            <h2>技能特长</h2>
+            <div class="tag-row large">
+                <span>Linux</span>
+                <span>Python</span>
+                <span>C++</span>
+                <span>eNSP</span>
+                <span>TCP/IP</span>
+                <span>MySQL</span>
+                <span>Office</span>
+                <span>HCIA</span>
+            </div>
+
+            <h2>实践摘要</h2>
+            <p>
+                参与华为 ICT 网络赛道并获得省级三等奖；在校级“8+6”工程实践活动中获得优秀个人作品三等奖；
+                参与“三下乡”社会实践，负责采访、线索搜集与人员对接。
+            </p>
+
+            <div class="detail-actions">
+                <a class="btn btn-primary" href="{{ profile.resume_pdf }}" target="_blank" rel="noopener">查看 PDF 简历</a>
+                <a class="btn btn-default" href="{{ profile.resume_docx }}">下载 Word 简历</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+# Python / Django generated files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+
+# Local runtime state
+db.sqlite3
+whoosh_index/
+media/bilidown/
+output/
+
+# Local editor and environment files
+.vscode/
+.idea/
+.env
+.venv/
+venv/
+env/
+
+# OS generated files
+Thumbs.db
+.DS_Store

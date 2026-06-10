@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} - 联系我{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>联系我</h1>
+        <p>欢迎围绕网络工程、Python Web、Linux 运维和项目实践交流。</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container">
+        <div class="row contact-grid">
+            <div class="col-md-7">
+                <div class="content-panel">
+                    <h2>联系方式</h2>
+                    <div class="contact-list">
+                        <a href="mailto:{{ profile.email }}">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            {{ profile.email }}
+                        </a>
+                        <a href="tel:{{ profile.phone }}">
+                            <span class="glyphicon glyphicon-phone"></span>
+                            {{ profile.phone }}
+                        </a>
+                        <span>
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                            {{ profile.location }}
+                        </span>
+                    </div>
+
+                    <h2>当前状态</h2>
+                    <p>{{ profile.school }} {{ profile.major }} 在读，关注网络运维、云计算和 Python Web 方向。</p>
+
+                    <div class="detail-actions">
+                        <a class="btn btn-primary" href="{% url 'contactApp:recruit' %}">查看简历</a>
+                        <a class="btn btn-default" href="{% url 'toolsApp:bilidown' %}">打开 BiliDown</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <aside class="contact-card">
+                    <strong>Hu Yiming</strong>
+                    <span>Network Engineering Student</span>
+                    <p>Linux · Python · C++ · eNSP · TCP/IP · MySQL</p>
+                    <div class="tag-row large">
+                        <span>可交流项目</span>
+                        <span>可下载简历</span>
+                        <span>BiliDown 内置</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

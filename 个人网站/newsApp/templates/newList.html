@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %} - {{ newName }}{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">Notes</span>
+        <h1>{{ newName }}</h1>
+        <p>把课程、实践和项目中的关键点整理成可回顾的技术笔记。</p>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container">
+        <div class="section-heading">
+            <span>Notebook</span>
+            <h2>{{ newName }}</h2>
+            <p>按方向归档课程、实验和项目中沉淀下来的关键点。</p>
+        </div>
+        <div class="filter-tabs">
+            {% for key, label in categories.items %}
+            <a class="{% if submenu == key %}active{% endif %}" href="{% url 'newsApp:news' key %}">{{ label }}</a>
+            {% endfor %}
+        </div>
+
+        <form class="note-search" method="get" action="{% url 'newsApp:search' %}">
+            <div class="input-group">
+                <input type="text" name="keyword" class="form-control" placeholder="搜索技术笔记">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">搜索</button>
+                </span>
+            </div>
+        </form>
+
+        <div class="note-list">
+            {% for note in newList %}
+            <article class="note-item">
+                <time>{{ note.date }}</time>
+                <h2><a href="{% url 'newsApp:newsDetail' note.id %}">{{ note.title }}</a></h2>
+                <p>{{ note.summary }}</p>
+            </article>
+            {% empty %}
+            <div class="empty-state">没有找到对应笔记。</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

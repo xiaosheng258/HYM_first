@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} - 搜索结果{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <div class="container">
+        <span class="eyebrow">Search</span>
+        <h1>{{ newName }}</h1>
+    </div>
+</section>
+
+<section class="section-wrap">
+    <div class="container">
+        <div class="note-list">
+            {% for note in newList %}
+            <article class="note-item">
+                <time>{{ note.date }}</time>
+                <h2><a href="{% url 'newsApp:newsDetail' note.id %}">{{ note.title }}</a></h2>
+                <p>{{ note.summary }}</p>
+            </article>
+            {% empty %}
+            <div class="empty-state">没有匹配到“{{ keyword }}”相关内容。</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
