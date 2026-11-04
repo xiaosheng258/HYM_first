@@ -1,0 +1,114 @@
+{
+  "name": "campus-event-planner",
+  "version": "1.0.0",
+  "description": "Multi-agent event planning team that turns basic activity info into a full proposal, budget, risk plan and promo kit.",
+  "author": {
+    "name": "胡一鸣",
+    "email": "hu.yiming@example.com"
+  },
+  "agents": [
+    "./agents/campus-event-planner-team-lead.md",
+    "./agents/proposal-writer.md",
+    "./agents/logistics-coordinator.md",
+    "./agents/budget-analyst.md",
+    "./agents/risk-manager.md",
+    "./agents/promo-copywriter.md"
+  ],
+  "skills": ["./skills/event-planning-kit"],
+
+  "expertType": "team",
+  "agentName": "campus-event-planner-team-lead",
+  "teamInfo": {
+    "leadAgent": "campus-event-planner-team-lead",
+    "memberAgents": [
+      "proposal-writer",
+      "logistics-coordinator",
+      "budget-analyst",
+      "risk-manager",
+      "promo-copywriter"
+    ]
+  },
+
+  "displayName": {
+    "en": "Event Planning Dream Team",
+    "zh": "活动策划天团"
+  },
+  "profession": {
+    "en": "Event Planning Dream Team",
+    "zh": "活动策划天团"
+  },
+  "displayDescription": {
+    "en": "A multi-agent event planning team: feed in basic activity info and it parallel-produces a proposal, budget, risk plan and promo kit.",
+    "zh": "多角色协同的活动策划天团：输入活动基本信息，并行产出策划方案、预算、风险预案与宣传文案。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "帮我策划一场社团迎新破冰活动，规模 80 人，下周五晚 7 点在大学生活动中心多功能厅，要完整策划书、预算、风险预案和宣传文案。",
+    "en": "Help me plan a freshman ice-breaker for ~80 people next Friday 7pm at the student center, with full proposal, budget, risk plan and promo copy."
+  },
+  "plugin": "campus-event-planner",
+  "tags": [
+    { "en": "Event Planning", "zh": "活动策划" },
+    { "en": "Campus & Studio Ops", "zh": "校园运营" },
+    { "en": "Promo Copy", "zh": "宣传文案" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Plan a freshman ice-breaker for ~80 people next Friday 7pm at the student center, with full proposal, budget, risk plan and promo copy.",
+      "zh": "帮我策划一场社团迎新破冰活动，规模 80 人，下周五晚 7 点在大学生活动中心多功能厅，要完整策划书、预算、风险预案和宣传文案。"
+    },
+    {
+      "en": "Build a detailed budget table for a lecture: list venue, materials, catering, prizes with unit prices and totals.",
+      "zh": "给一场讲座活动做一份详细预算表，列出场地、物料、餐饮、奖品等支出项目与单价合计。"
+    },
+    {
+      "en": "Write promo push copy and poster slogans for my event, targeting freshman, lively and trendy tone.",
+      "zh": "为我的活动写一版面向大一新生的宣传推送文案和海报文案，风格活泼有网感。"
+    }
+  ],
+  "members": [
+    {
+      "id": "campus-event-planner-team-lead",
+      "displayName": { "en": "Zhou Quancheng", "zh": "周全成" },
+      "profession": { "en": "Planning Director", "zh": "策划总监" },
+      "avatar": "avatars/campus-event-planner-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "proposal-writer",
+      "displayName": { "en": "Chen Shuzhi", "zh": "陈述之" },
+      "profession": { "en": "Proposal Writer", "zh": "方案主笔" },
+      "avatar": "avatars/proposal-writer.png",
+      "role": "member"
+    },
+    {
+      "id": "logistics-coordinator",
+      "displayName": { "en": "Peng Beqi", "zh": "彭备齐" },
+      "profession": { "en": "Logistics Coordinator", "zh": "后勤筹备官" },
+      "avatar": "avatars/logistics-coordinator.png",
+      "role": "member"
+    },
+    {
+      "id": "budget-analyst",
+      "displayName": { "en": "Qian Suanqing", "zh": "钱算清" },
+      "profession": { "en": "Budget Analyst", "zh": "预算分析师" },
+      "avatar": "avatars/budget-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "risk-manager",
+      "displayName": { "en": "Wei Ping'an", "zh": "卫平安" },
+      "profession": { "en": "Risk Manager", "zh": "风险管控师" },
+      "avatar": "avatars/risk-manager.png",
+      "role": "member"
+    },
+    {
+      "id": "promo-copywriter",
+      "displayName": { "en": "Xuan Dayuan", "zh": "宣达远" },
+      "profession": { "en": "Promo Copywriter", "zh": "宣传文案师" },
+      "avatar": "avatars/promo-copywriter.png",
+      "role": "member"
+    }
+  ]
+}
